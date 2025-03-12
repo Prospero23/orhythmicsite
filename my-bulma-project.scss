@@ -16,5 +16,24 @@ $beige-lighter: #eff0eb;
   $input-shadow: none
 );
 
+// .has-bg-img { background: url('/assets/bg-image.jpg')center center; background-size:cover; }
+.has-bg-img {
+  position: relative; /* establish a stacking context */
+  z-index: 1;
+}
+
+/* Create a pseudo-element for the background image */
+.has-bg-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('/assets/bg-image.jpg') center center / cover no-repeat;
+  opacity: 0.2; /* Adjust the value (0.0 to 1.0) for lower opacity */
+  z-index: -1; /* Place the pseudo-element behind the content */
+}
+
 // Import the Google Font
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
