@@ -1,0 +1,26 @@
+{
+  "name": "thepowerfulorythmicsite",
+  "version": "1.0.0",
+  "description": "site for apple compliance etc etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-bulma": "sass --load-path=node_modules my-bulma-project.scss my-bulma-project.css",
+    "start": "npm run build-bulma -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prospero23/ThePowerfulORythmicSite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prospero23/ThePowerfulORythmicSite/issues"
+  },
+  "homepage": "https://github.com/Prospero23/ThePowerfulORythmicSite",
+  "dependencies": {
+    "bulma": "^1.0.3",
+    "sass": "^1.85.1"
+  }
+}
