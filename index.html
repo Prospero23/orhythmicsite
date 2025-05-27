@@ -1,65 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <!-- improve SEO & accessibility -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ORhythmic — an app for exploring nested tuplets and complex rhythms.">
+    <link rel="icon" href="/favicon.ico">
     <title>ORhythmic</title>
+
     <link rel="stylesheet" href="my-bulma-project.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="…sha384…" crossorigin="anonymous" />
   </head>
+
   <body>
     <section class="hero is-fullheight has-bg-img">
-      <!-- Hero head: will stick at the top -->
       <div class="hero-head">
-        <header class="navbar">
-          <div class="container">
-            <div class="navbar-brand">
-              <a class="navbar-item">
-               ORhythmic
-              </a>
-              <span class="navbar-burger" data-target="navbarMenuHeroC">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </div>
-            <div id="navbarMenuHeroC" class="navbar-menu">
-              <div class="navbar-end">
-                <!-- <a class="navbar-item is-active"> FAQ </a> -->
-                <a class="navbar-item" target="_blank" href="support.html"> Support </a>
-                <span class="navbar-item">
-                  <a class="button is-success is-inverted">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>App Store</span>
-                  </a>
-                </span>
-              </div>
+    <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <strong>ORhythmic</strong>
+          </a>
+          <a role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="supportNav">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="supportNav" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="support.html">Support</a>
+            <a class="navbar-item" href="https://apps.apple.com" target="_blank">App Store</a>
             </div>
           </div>
-        </header>
-      </div>
-    
-      <!-- Hero content: will be in the middle -->
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <p class="title">ORhythmic</p>
-          <p class="subtitle">tuplets/tuplets/tuplets</p>
         </div>
       </div>
-    
-    </section>   
+    </nav>
+      </div>
+
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title is-1 has-text-white">ORhythmic</h1>
+          <h2 class="subtitle is-4 has-text-light">Explore (near) infinitely nested tuplets</h2>
+          <a href="https://apps.apple.com" target="_blank" class="button is-primary is-large">
+            Get the App
+          </a>
+        </div>
+      </div>
+
+      <!-- scroll hint -->
+      <div class="hero-foot">
+        <div class="container has-text-centered">
+          <span class="icon is-large">
+            <i class="fas fa-angle-double-down fa-2x has-text-white"></i>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- features section -->
+    <section class="section">
+      <div class="container">
+        <div class="columns is-multiline">
+          <div class="column is-one-third">
+            <div class="box has-text-centered">
+              <span class="icon is-large"><i class="fas fa-layer-group fa-2x"></i></span>
+              <h3 class="title is-5">Nested Tuplets</h3>
+              <p>Create and combine tuplets of almost any size in real-time.</p>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="box has-text-centered">
+              <span class="icon is-large"><i class="fas fa-play-circle fa-2x"></i></span>
+              <h3 class="title is-5">Live Playback</h3>
+              <p>Hear your complex rhythms with precise timing.</p>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="box has-text-centered">
+              <span class="icon is-large"><i class="fas fa-cogs fa-2x"></i></span>
+              <h3 class="title is-5">Customizable</h3>
+              <p>Tweak BPM, accents, and more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer">
       <div class="content has-text-centered">
-        <h1>legal</h1>
         <p>
-          <a target="_blank" href="legal/terms-of-service.html">terms of service</a>
+          <strong>ORhythmic</strong> by Ben Eidson. &copy; 2025.
         </p>
         <p>
-          <a target="_blank" href="legal/privacy-policy.html">privacy policy</a>
+          <a href="legal/terms-of-service.html" target="_blank">Terms of Service</a> |
+          <a href="legal/privacy-policy.html" target="_blank">Privacy Policy</a>
         </p>
       </div>
-    </footer>          
-    </body>
+    </footer>
+
+    <!-- Bulma navbar burger toggle script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const $burger = document.querySelector('.navbar-burger');
+        const $menu   = document.getElementById($burger.dataset.target);
+
+        $burger.addEventListener('click', () => {
+          $burger.classList.toggle('is-active');
+          $menu.classList.toggle('is-active');
+        });
+      });
+    </script>
+  </body>
 </html>
