@@ -30,7 +30,7 @@ $beige-lighter: #eff0eb;
   right: 0;
   bottom: 0;
   left: 0;
-  background: url('/assets/bg-image.jpg') center center / cover no-repeat;
+  background: url('assets/bg-image.jpg') center center / cover no-repeat;
   opacity: 0.2; /* Adjust the value (0.0 to 1.0) for lower opacity */
   z-index: -1; /* Place the pseudo-element behind the content */
 }
